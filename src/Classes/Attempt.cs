@@ -16,7 +16,7 @@ namespace K4hr_Timer.src.Classes
         DateTime finishesAt;
         List<Run> runs;
         System.Timers.Timer attemptTimer;
-        int attemptsToBeat;
+        public int desiredRuns;
 
         public Attempt(int hours, int attemptsToBeat, TimeSpan startOffset)
         {
@@ -26,7 +26,7 @@ namespace K4hr_Timer.src.Classes
             attemptTimer = new System.Timers.Timer();
             attemptTimer.Interval = hours * 60 * 60 * 1000;
             attemptTimer.Elapsed += AttemptTimer_Elapsed;
-            this.attemptsToBeat = attemptsToBeat;
+            this.desiredRuns = attemptsToBeat;
         }
 
         private void AttemptTimer_Elapsed(object? sender, ElapsedEventArgs e)
@@ -41,9 +41,9 @@ namespace K4hr_Timer.src.Classes
 
         public TimeSpan averageTimeNeeded()
         {
-            if (runs.Count >= attemptsToBeat)
+            if (runs.Count >= desiredRuns)
                 return TimeSpan.Zero;
-            return timeRemaining() / (attemptsToBeat - runs.Count);
+            return timeRemaining() / (desiredRuns - runs.Count);
         }
 
         public TimeSpan timeRemaining()
