@@ -59,6 +59,8 @@ namespace K4hr_Timer.src.Classes
                 return;
             if (record.retimed_igt == 0)
                 return;
+            if (record.is_completed == false)
+                return;
 
             runFinished?.Invoke(this, new RunFinishedEventArgs(record.retimed_igt.Value, record.date.Value));
         }
