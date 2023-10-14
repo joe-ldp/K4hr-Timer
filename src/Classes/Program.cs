@@ -1,4 +1,4 @@
-namespace K4hr_Timer.src
+namespace K4hr_Timer.src.Classes
 {
     internal static class Program
     {

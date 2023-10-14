@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Timers;
 
-namespace K4hr_Timer
+namespace K4hr_Timer.src.Classes
 {
     internal class Attempt
     {
@@ -64,7 +64,7 @@ namespace K4hr_Timer
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine(string.Format("Time Remaining: {0} ({1} avg RTA needed)", 
+            sb.AppendLine(string.Format("Time Remaining: {0} ({1} avg RTA needed)",
                 timeRemaining().ToString(@"hh\:mm\:ss"), averageTimeNeeded().ToString(@"hh\:mm\:ss")));
             foreach (Run run in runs)
             {

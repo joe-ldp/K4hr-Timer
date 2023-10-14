@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.IO;
 using Newtonsoft.Json;
 
-namespace K4hr_Timer.src
+namespace K4hr_Timer.src.Classes
 {
     public class RunFinishedEventArgs : EventArgs
     {
