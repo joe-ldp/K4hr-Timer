@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 using System.IO;
 using Newtonsoft.Json;
 
-namespace K4hr_Timer
+namespace K4hr_Timer.src
 {
     public class RunFinishedEventArgs : EventArgs
     {
         public long retimed_igt { get; set; }
-        public long runFinishedAt {  get; set; }
+        public long runFinishedAt { get; set; }
 
         public RunFinishedEventArgs(long retimed_igt, long runFinishedAt)
         {
@@ -30,8 +30,8 @@ namespace K4hr_Timer
         public Watcher()
         {
             path = Path.Combine(
-                Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), 
-                "speedrunigt", 
+                Environment.GetFolderPath(Environment.SpecialFolder.UserProfile),
+                "speedrunigt",
                 "records");
 
             fsw = new FileSystemWatcher(path);
