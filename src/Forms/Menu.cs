@@ -82,7 +82,7 @@ namespace K4hr_Timer
             }
 
             Run run = new Run(
-                currAtt.NumCompletedRuns(),
+                currAtt.NumCompletedRuns()+1,
                 TimeSpan.FromMilliseconds(e.retimed_igt),
                 currAtt.CurrentTime());
 
