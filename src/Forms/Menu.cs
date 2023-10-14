@@ -125,6 +125,10 @@ namespace K4hr_Timer
         private void numDesiredRuns_ValueChanged(object sender, EventArgs e)
         {
             UpdateTimeNeeded();
+            if (currAtt != null)
+            {
+                currAtt.desiredRuns = (int)numDesiredRuns.Value;
+            }
         }
 
         private void numHours_ValueChanged(object sender, EventArgs e)
