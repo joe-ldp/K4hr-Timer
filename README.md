@@ -1,4 +1,7 @@
 # K4hr-Timer
+A verifiable alternative to [Gregor's SpeedrunIGT extension](https://github.com/Gregor0410/k4hr-timer)
+## Dependencies
+Dependent on [Redlime's SpeedrunIGT mod](https://github.com/RedLime/SpeedRunIGT).
 ## Usage
 - Download the exe file from the releases tab
 - Open it. `currentAttempt.txt` will be created in the same folder as the exe. Add this as a text source to OBS if you want an OBS overlay. There is no configurability of this file currently.
