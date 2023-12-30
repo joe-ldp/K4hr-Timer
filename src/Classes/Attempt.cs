@@ -21,7 +21,7 @@ namespace K4hr_Timer.src.Classes
         public Attempt(int hours, int attemptsToBeat, TimeSpan startOffset)
         {
             startedAt = DateTime.Now.Subtract(startOffset);
-            finishesAt = DateTime.Now + TimeSpan.FromHours(hours);
+            finishesAt = DateTime.Now.Add(TimeSpan.FromHours(hours)).Subtract(startOffset);
             runs = new List<Run>();
             attemptTimer = new System.Timers.Timer();
             attemptTimer.Interval = hours * 60 * 60 * 1000;
